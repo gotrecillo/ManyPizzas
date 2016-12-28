@@ -14,7 +14,8 @@
         "phpunit/phpunit": "~5.0",
         "mockery/mockery": "~0.9",
         "barryvdh/laravel-ide-helper": "^2.2",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "flipbox/lumen-generator": "^5.3"
     },
     "autoload": {
         "psr-4": {

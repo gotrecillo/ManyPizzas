@@ -84,6 +84,7 @@ $app->singleton(
 
 if ($app->environment() !== 'production') {
     $app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+    $app->register(\Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 }
 
 /*
