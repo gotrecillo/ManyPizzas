@@ -15,7 +15,8 @@
         "mockery/mockery": "~0.9",
         "barryvdh/laravel-ide-helper": "^2.2",
         "doctrine/dbal": "^2.5",
-        "flipbox/lumen-generator": "^5.3"
+        "flipbox/lumen-generator": "^5.3",
+        "codeception/codeception": "^2.2"
     },
     "autoload": {
         "psr-4": {
@@ -31,6 +32,9 @@
     "scripts": {
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
+        ],
+        "test": [
+            "./vendor/bin/codecept run"
         ]
     },
     "minimum-stability": "dev",
