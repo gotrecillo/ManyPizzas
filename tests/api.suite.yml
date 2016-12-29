@@ -1,0 +1,9 @@
+class_name: ApiTester
+modules:
+    enabled:
+        - \Helper\Api
+        - Asserts
+        - REST:
+            depends: Lumen
+        - Lumen:
+            enviroment_file: .env.testing
