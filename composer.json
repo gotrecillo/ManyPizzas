@@ -37,6 +37,9 @@
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
     ],
+    "post-cmd-install": [
+      "@prepare-test-database"
+    ],
     "prepare-test-database": [
       "touch ./database/stubdb.sqlite",
       "php artisan migrate:refresh --seed --database=\"setup\" --env=\"testing\"",
