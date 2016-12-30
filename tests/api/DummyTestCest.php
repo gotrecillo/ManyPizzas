@@ -17,5 +17,6 @@ class DummyTestCest
         $I->wantTo('Make a dummy test');
         $I->sendGET('/');
         $I->seeResponseCodeIs(200);
+
     }
 }

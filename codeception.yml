@@ -12,6 +12,12 @@ settings:
 extensions:
     enabled:
         - Codeception\Extension\RunFailed
+coverage:
+    include:
+        - app/*
+    exclude:
+        - app/Http/routes.php
+        - app/Http/Routes/*
 modules:
     config:
         Db:
