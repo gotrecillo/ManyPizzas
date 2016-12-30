@@ -1,5 +1,5 @@
 before_script:
-  - bash .gitlab-ci.sh
+  - bash .gitlab-ci.sh > /dev/null 2>&1
 
 variables:
   MYSQL_DATABASE: manypizzas
