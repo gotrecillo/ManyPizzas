@@ -19,8 +19,7 @@
     "mockery/mockery": "~0.9",
     "barryvdh/laravel-ide-helper": "^2.2",
     "doctrine/dbal": "^2.5",
-    "flipbox/lumen-generator": "^5.3",
-    "codeception/codeception": "^2.2"
+    "flipbox/lumen-generator": "^5.3"
   },
   "autoload": {
     "psr-4": {
@@ -46,7 +45,10 @@
       "cp ./database/stubdb.sqlite ./database/testing.sqlite"
     ],
     "test": [
-      "./vendor/bin/codecept run"
+      "./vendor/bin/phpunit --coverage-text"
+    ],
+    "test-coverage": [
+      "./vendor/bin/phpunit --coverage-text"
     ]
   },
   "minimum-stability": "dev",

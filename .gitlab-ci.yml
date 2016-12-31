@@ -2,25 +2,24 @@ variables:
     MYSQL_DATABASE: manypizzas
     MYSQL_ROOT_PASSWORD: password
 
-codeception:
+phpunit:
     stage: test
     image: php:7.0
     services:
         - mysql:5.7
     script:
         - bash .gitlab-ci.sh > /dev/null 2>&1
-        - php vendor/bin/codecept run --coverage --coverage-html
+        - php vendor/bin/phpunit --coverage-text --coverage-html coverage
     artifacts:
         paths:
-            - tests/_output/coverage
+            - coverage
 
 pages:
     stage: deploy
-    image: ruby:2.3
     dependencies:
-        - codeception
+        - phpunit
     script:
-        - mv tests/_output/coverage/* public/
+        - mv coverage/* public/
     artifacts:
         paths:
             - public
