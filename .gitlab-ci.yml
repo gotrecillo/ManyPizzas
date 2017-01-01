@@ -9,11 +9,11 @@ phpunit:
         - mysql:5.7
     script:
         - bash .gitlab-ci.sh > /dev/null 2>&1
-        - php vendor/bin/phpunit --coverage-text --coverage-html coverage
+        - vendor/bin/phpunit --coverage-text --coverage-html coverage
+        - vendor/bin/phpcs --standard=PSR2 app/
     artifacts:
         paths:
             - coverage
-
 pages:
     stage: deploy
     dependencies:
