@@ -5,3 +5,4 @@ Homestead.yaml
 .env
 _ide_helper.php
 tests/_output/*
+tests/_coverage/*
