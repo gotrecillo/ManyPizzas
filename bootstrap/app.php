@@ -23,9 +23,9 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-// $app->withFacades();
+$app->withFacades();
 
-// $app->withEloquent();
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +87,8 @@ if ($app->environment() !== 'production') {
     $app->register(\Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 }
 
+$app->configure('graphql');
+$app->register(\Folklore\GraphQL\LumenServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
