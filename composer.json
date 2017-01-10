@@ -50,7 +50,7 @@
       "./vendor/bin/phpunit --coverage-text"
     ],
     "test-coverage": [
-      "./vendor/bin/phpunit --coverage-text"
+      "./vendor/bin/phpunit --coverage-html tests/_coverage"
     ],
     "lint": [
       "./vendor/bin/phpcs --standard=PSR2 app/"
